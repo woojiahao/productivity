@@ -1,18 +1,31 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Productivity</h1>
+    <p>
+      I created this site to document my productivity tools and share about what methods I use to stay productive. I am
+      by no means a productivity expert nor are these methods scientifically proven, these methods work for me
+      personally so I thought I'd share them so others might be able to learn from it!
+    </p>
+    <CalendarBlock v-bind:block="block"/>
+    <CalendarBlock v-bind:block="block2"/>
+    <CalendarBlock v-bind:block="block"/>
+    <CalendarBlock v-bind:block="block2"/>
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+<script lang="ts">
+  // @ts-nocheck
+  import CalendarBlock from "@/components/CalendarBlock"
+  import {Component, Vue} from "vue-property-decorator"
+  import CalendarBlockColor from "@/classes/CalendarBlockColor"
 
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
+  @Component({
+    components: {
+      CalendarBlock
+    }
+  })
+  export default class Home extends Vue {
+    private block = CalendarBlockColor.EVENT
+    private block2 = CalendarBlockColor.EXERCISE
   }
-}
 </script>

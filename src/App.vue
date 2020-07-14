@@ -1,32 +1,55 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view/>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Rubik');
 
-#nav {
-  padding: 30px;
-}
+  * {
+    margin: 0;
+    padding: 0;
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+    --blue: #83bcff;
+    /*--bg-color: #ffccc9;*/
+    --bg-color: #2b2d42;
+    --fg-color: #fafafa;
+    --base-unit: 18px;
+    --serif-font: "Crimson Text", serif;
+    --sans-serif-font: "Rubik", Avenir, Helvetica, Arial, sans-serif;
+  }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  body, html {
+    background-color: var(--bg-color);
+  }
+
+  body, html, #app {
+    width: 100%;
+    height: 100%;
+
+    font-size: var(--base-unit);
+  }
+
+  #app {
+    font-family: var(--sans-serif-font);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    color: var(--fg-color);
+
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--serif-font);
+    padding: 1em;
+    text-align: center;
+  }
+
+  p {
+    line-height: 25px;
+  }
 </style>
