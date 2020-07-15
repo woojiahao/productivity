@@ -9,7 +9,7 @@
 
   @Component
   export default class CalendarBlock extends Vue {
-    @Prop() readonly block: CalendarBlockColor = CalendarBlockColor.EXERCISE
+    @Prop() readonly block: CalendarBlockColor | undefined
   }
 </script>
 

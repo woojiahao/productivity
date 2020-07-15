@@ -14,8 +14,7 @@
 </template>
 
 <script lang="ts">
-  // @ts-nocheck
-  import CalendarBlock from "@/components/CalendarBlock"
+  import CalendarBlock from "@/components/CalendarBlock.vue"
   import {Component, Vue} from "vue-property-decorator"
   import CalendarBlockColor from "@/classes/CalendarBlockColor"
 
