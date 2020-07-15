@@ -6,10 +6,7 @@
       by no means a productivity expert nor are these methods scientifically proven, these methods work for me
       personally so I thought I'd share them so others might be able to learn from it!
     </p>
-    <CalendarBlock v-bind:block="block"/>
-    <CalendarBlock v-bind:block="block2"/>
-    <CalendarBlock v-bind:block="block"/>
-    <CalendarBlock v-bind:block="block2"/>
+    <Calendar start="6.3" end="10.45" v-bind:items="items"/>
   </div>
 </template>
 
@@ -17,14 +14,20 @@
   import CalendarBlock from "@/components/CalendarBlock.vue"
   import {Component, Vue} from "vue-property-decorator"
   import CalendarBlockColor from "@/classes/CalendarBlockColor"
+  import Calendar from "@/components/Calendar.vue"
+  import CalendarItem from "@/classes/CalendarItem"
+  import TimeUnit from "@/classes/TimeUnit"
 
   @Component({
     components: {
+      Calendar,
       CalendarBlock
     }
   })
   export default class Home extends Vue {
-    private block = CalendarBlockColor.EVENT
-    private block2 = CalendarBlockColor.EXERCISE
+    private items = [
+      new CalendarItem(new TimeUnit("0630"), new TimeUnit("0700"), CalendarBlockColor.MISC, "Wake up"),
+      new CalendarItem(new TimeUnit("0700"), new TimeUnit("1200"), CalendarBlockColor.WORK, "Work"),
+    ]
   }
 </script>

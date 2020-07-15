@@ -1,5 +1,6 @@
 <template>
-  <div class="block" v-bind:style="{backgroundColor: block, width: `100%`, height: `200px`}">
+  <div class="block" v-bind:style="{backgroundColor: color, width: `100%`, height: `200px`}">
+    <p>{{taskName}}</p>
   </div>
 </template>
 
@@ -9,7 +10,8 @@
 
   @Component
   export default class CalendarBlock extends Vue {
-    @Prop() readonly block: CalendarBlockColor | undefined
+    @Prop() readonly color: CalendarBlockColor | undefined
+    @Prop() readonly taskName: string | undefined
   }
 </script>
 
@@ -17,5 +19,10 @@
   .block {
     border-radius: calc(var(--base-unit) / 2);
     margin-bottom: calc(var(--base-unit) / 3);
+  }
+
+  .block p {
+    padding: var(--base-unit);
+    color: var(--dark-text);
   }
 </style>

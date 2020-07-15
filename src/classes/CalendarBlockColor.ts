@@ -1,5 +1,5 @@
 enum CalendarBlockColor {
-  MISC = "#00fddc",
+  MISC = "#05a8aa",
   EXERCISE = "#ff5666",
   WORK = "#ffd447",
   PERSONAL = "#574ae2",

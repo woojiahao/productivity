@@ -16,6 +16,7 @@
     --bg-color: #2b2d42;
     --fg-color: #fafafa;
     --base-unit: 18px;
+    --dark-text: #141414;
     --serif-font: "Crimson Text", serif;
     --sans-serif-font: "Rubik", Avenir, Helvetica, Arial, sans-serif;
   }
@@ -51,5 +52,7 @@
 
   p {
     line-height: 25px;
+
+    margin-bottom: calc(var(--base-unit) * 2);
   }
 </style>
