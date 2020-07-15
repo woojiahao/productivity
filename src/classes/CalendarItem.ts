@@ -12,7 +12,5 @@ export default class CalendarItem {
     this.end = end
     this.color = color
     this.taskName = taskName
-
-    console.log(end.subtract(start))
   }
 }

@@ -11,8 +11,6 @@ export default class TimeUnit {
     const hour = parseInt(groups[1])
     const minute = parseInt(groups[2])
 
-    console.log(hour, minute)
-
     if (hour > 23 || hour < 0) throw new Error("0 <= hour <= 23")
     if (minute > 59 || minute < 0) throw new Error("0 <= minute <= 59")
 
@@ -22,9 +20,12 @@ export default class TimeUnit {
 
   subtract(other: TimeUnit): TimeUnit {
     let hour = this.hour
-    const minute = this.minute == 0 ? 60 : this.minute
+    let minute = this.minute
 
-    if (this.minute < other.minute) hour -= 1
+    if (this.minute < other.minute) {
+      hour -= 1
+      minute += 60
+    }
 
     const hourDiff = hour - other.hour
     const minuteDiff = minute - other.minute
@@ -32,5 +33,13 @@ export default class TimeUnit {
     const min = minuteDiff == 60 ? 0 : minuteDiff
 
     return new TimeUnit(`${hourDiff.toString().padStart(2, "0")}${min.toString().padStart(2, "0")}`)
+  }
+
+  toMinutes(): number {
+    return this.hour * 60 + this.minute
+  }
+
+  toReadable(): string {
+    return `${this.hour.toString().padStart(2, '0')}${this.minute.toString().padStart(2, '0')}`
   }
 }

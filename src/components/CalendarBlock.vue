@@ -1,28 +1,60 @@
 <template>
-  <div class="block" v-bind:style="{backgroundColor: color, width: `100%`, height: `200px`}">
-    <p>{{taskName}}</p>
+  <div class="block-container">
+    <p class="start">
+      {{item.start.toReadable()}}
+    </p>
+    <p class="task-name">
+      {{item.taskName}}
+    </p>
+    <div class="block" v-bind:style="{backgroundColor: item.color, width: `100%`, height: `${height}px`}">
+    </div>
   </div>
 </template>
 
 <script lang="ts">
   import {Component, Prop, Vue} from 'vue-property-decorator'
-  import CalendarBlockColor from "@/classes/CalendarBlockColor"
+  import CalendarItem from "@/classes/CalendarItem"
 
   @Component
   export default class CalendarBlock extends Vue {
-    @Prop() readonly color: CalendarBlockColor | undefined
-    @Prop() readonly taskName: string | undefined
+    @Prop() readonly item!: CalendarItem
+    height: number | undefined
+
+    data() {
+      return {
+        height: 0
+      }
+    }
+
+    mounted() {
+      const diff = this.item.end.subtract(this.item.start).toMinutes()
+      this.height = (diff / 30) * 30
+    }
   }
 </script>
 
 <style scoped>
+  .block-container {
+    display: flex;
+    position: relative;
+  }
+
+  .block-container p {
+    padding: 0;
+    margin: 0;
+  }
+
+  .block-container .start {
+    position: absolute;
+    left: -10%;
+  }
+
+  .block-container .task-name {
+    flex-basis: 12.5%;
+  }
+
   .block {
     border-radius: calc(var(--base-unit) / 2);
     margin-bottom: calc(var(--base-unit) / 3);
-  }
-
-  .block p {
-    padding: var(--base-unit);
-    color: var(--dark-text);
   }
 </style>
