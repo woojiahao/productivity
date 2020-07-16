@@ -14,6 +14,8 @@
 
     <Schedule/>
 
+    <Tasks/>
+
     <footer>
       This project is created with 💖 using Vue and TypeScript. The repository can be found <a href="https://github.com/woojiahao/productivity">here.</a>
     </footer>
@@ -23,9 +25,11 @@
 <script lang="ts">
   import {Component, Vue} from "vue-property-decorator"
   import Schedule from "@/components/Schedule.vue"
+  import Tasks from "@/components/Tasks.vue"
 
   @Component({
     components: {
+      Tasks,
       Schedule
     }
   })

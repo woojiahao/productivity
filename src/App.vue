@@ -51,7 +51,7 @@
     padding: 1em 0;
   }
 
-  h1::before, h2::before {
+  h1::before, h2::before, h3::before {
     position: absolute;
     left: -5%;
   }
@@ -76,5 +76,13 @@
 
   a {
     color: var(--blue);
+  }
+
+  ol, ul {
+    list-style-position: inside;
+  }
+
+  ol li:not(:last-child), ul li:not(:last-child) {
+    margin-bottom: 0.5em;
   }
 </style>
