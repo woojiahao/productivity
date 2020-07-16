@@ -1,24 +1,17 @@
 # productivity
 
-## Project setup
-```
-npm install
+# Deploy
+
+```bash
+git clone https://github.com/woojiahao/productivity.git
+cd productivity/
+npm install 
+npm run-script serve
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## TODO
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- [ ] Using Google Tasks with Google Calendar
+- [ ] Using Gmail
+- [ ] Using Trello
+- [ ] Using org-mode
