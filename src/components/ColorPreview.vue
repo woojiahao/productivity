@@ -61,6 +61,7 @@
   .colors {
     display: flex;
     flex-basis: 30%;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 

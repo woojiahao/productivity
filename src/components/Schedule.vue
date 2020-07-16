@@ -157,7 +157,7 @@
           These are events that aren't necessarily personal and are sometimes optional. They are different from personal
           events as it is much clearer when planning ahead whether or not certain events are important.
         `
-      }
+      },
     }
   }
 </script>
