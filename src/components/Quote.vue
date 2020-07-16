@@ -25,10 +25,14 @@
 
   blockquote h3 {
     text-align: start;
-    font-family: var(--sans-serif-font);
+    font-family: var(--body-font);
     font-size: 1.25em;
     padding: 0 0 1em 0;
     color: #fafafa;
+  }
+
+  blockquote h3::before {
+    content: "";
   }
 
   blockquote p:last-child {

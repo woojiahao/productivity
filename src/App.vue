@@ -5,7 +5,7 @@
 </template>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Rubik');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik');
 
   * {
     margin: 0;
@@ -15,10 +15,10 @@
     /*--bg-color: #ffccc9;*/
     --bg-color: #2b2d42;
     --fg-color: #fafafa;
-    --base-unit: 18px;
+    --base-unit: 16px;
     --dark-text: #141414;
-    --serif-font: "Crimson Text", serif;
-    --sans-serif-font: "Rubik", Avenir, Helvetica, Arial, sans-serif;
+    --heading-font: "Montserrat", serif;
+    --body-font: "Rubik", Avenir, Helvetica, Arial, sans-serif;
     --gray: #BDBDBD;
   }
 
@@ -34,7 +34,7 @@
   }
 
   #app {
-    font-family: var(--sans-serif-font);
+    font-family: var(--body-font);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -46,9 +46,26 @@
 
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--serif-font);
-    padding: 1em;
-    text-align: center;
+    position: relative;
+    font-family: var(--heading-font);
+    padding: 1em 0;
+  }
+
+  h1::before, h2::before {
+    position: absolute;
+    left: -5%;
+  }
+
+  h1::before {
+    content: "#";
+  }
+
+  h2::before {
+    content: "##";
+  }
+
+  h3::before {
+    content: "###";
   }
 
   p {

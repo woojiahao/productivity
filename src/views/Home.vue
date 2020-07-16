@@ -13,6 +13,10 @@
     </p>
 
     <Schedule/>
+
+    <footer>
+      This project is created with 💖 using Vue and TypeScript. The repository can be found <a href="https://github.com/woojiahao/productivity">here.</a>
+    </footer>
   </div>
 </template>
 
@@ -28,3 +32,10 @@
   export default class Home extends Vue {
   }
 </script>
+
+<style scoped>
+  footer {
+    margin: 2em 0;
+    text-align: center;
+  }
+</style>

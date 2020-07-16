@@ -46,7 +46,7 @@
 
   .block-container .start {
     position: absolute;
-    left: -10%;
+    left: -5%;
   }
 
   .block-container .task-name {
@@ -54,7 +54,7 @@
   }
 
   .block {
-    border-radius: calc(var(--base-unit) / 2);
+    border-radius: 5px;
     margin-bottom: calc(var(--base-unit) / 3);
   }
 </style>

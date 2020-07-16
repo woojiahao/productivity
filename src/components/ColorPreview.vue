@@ -42,6 +42,7 @@
     --size: 50px;
     width: var(--size);
     height: var(--size);
+    border-radius: 5px;
   }
 
   .color-box:hover {
@@ -70,10 +71,14 @@
 
   .description h3 {
     text-align: start;
-    font-family: var(--sans-serif-font);
+    font-family: var(--body-font);
     font-size: 1.25em;
     padding: 0 0 1em 0;
     color: #fafafa;
+  }
+
+  .description h3::before {
+    content: "";
   }
 </style>
 

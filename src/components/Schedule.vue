@@ -83,6 +83,11 @@
     </p>
 
     <ColorPreview v-bind:items="colorPreviewItems"/>
+
+    <p>
+      While the schedule provides a husk for the day, it does not provide much insight into the specific tasks and
+      items that I wish to accomplish. This is where Google Tasks come in.
+    </p>
   </div>
 </template>
 
