@@ -19,6 +19,7 @@
     --dark-text: #141414;
     --serif-font: "Crimson Text", serif;
     --sans-serif-font: "Rubik", Avenir, Helvetica, Arial, sans-serif;
+    --gray: #BDBDBD;
   }
 
   body, html {
@@ -39,7 +40,7 @@
 
     color: var(--fg-color);
 
-    max-width: 768px;
+    max-width: 1024px;
     margin: 0 auto;
   }
 
@@ -53,6 +54,10 @@
   p {
     line-height: 25px;
 
-    margin-bottom: calc(var(--base-unit) * 2);
+    margin-bottom: 2em;
+  }
+
+  a {
+    color: var(--blue);
   }
 </style>
