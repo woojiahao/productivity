@@ -15,8 +15,6 @@
     components: {CalendarBlock}
   })
   export default class Calendar extends Vue {
-    @Prop() readonly start: number | undefined
-    @Prop() readonly end: number | undefined
     @Prop() readonly items: Array<CalendarItem> | undefined
   }
 </script>
@@ -24,5 +22,6 @@
 <style scoped>
   .calendar {
     width: 100%;
+    margin-bottom: 2em;
   }
 </style>

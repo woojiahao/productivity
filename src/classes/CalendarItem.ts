@@ -7,9 +7,9 @@ export default class CalendarItem {
   readonly color: CalendarBlockColor
   readonly taskName: string
 
-  constructor(start: TimeUnit, end: TimeUnit, color: CalendarBlockColor, taskName: string) {
-    this.start = start
-    this.end = end
+  constructor(start: string, end: string, color: CalendarBlockColor, taskName: string) {
+    this.start = new TimeUnit(start)
+    this.end = new TimeUnit(end)
     this.color = color
     this.taskName = taskName
   }
