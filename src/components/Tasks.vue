@@ -83,7 +83,4 @@
 </script>
 
 <style scoped>
-  .tips {
-    margin-bottom: 2em;
-  }
 </style>

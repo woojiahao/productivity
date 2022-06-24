@@ -80,6 +80,7 @@
 
   ol, ul {
     list-style-position: inside;
+    margin-bottom: 2em;
   }
 
   ol li:not(:last-child), ul li:not(:last-child) {

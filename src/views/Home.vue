@@ -20,6 +20,8 @@
 
     <Tasks/>
 
+    <ProgrammingBucket/>
+
     <footer>
       This project is created with 💖 using Vue and TypeScript. The repository can be found <a href="https://github.com/woojiahao/productivity">here.</a>
     </footer>
@@ -30,11 +32,13 @@
   import {Component, Vue} from "vue-property-decorator"
   import Schedule from "@/components/Schedule.vue"
   import Tasks from "@/components/Tasks.vue"
+  import ProgrammingBucket from "@/components/ProgrammingBucket.vue"
 
   @Component({
     components: {
       Tasks,
-      Schedule
+      Schedule,
+      ProgrammingBucket
     }
   })
   export default class Home extends Vue {
